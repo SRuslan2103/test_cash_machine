@@ -88,19 +88,15 @@ public class Main {
                 }
 
                 if (word.length <= 2) {                                                    // "ВНЕСТИ"
-                    int f = 0;                                                              //корректность ввода суммы
-                    for (int i = 0; i < word[1].length(); i++) {
-                        if (Character.isLetter(word[1].charAt(i))) {
-                            f++;
-                        }
-                    }
-                    if (f > 0) {
+                    word [1] = word [ 1 ].replace(",", ".");
+                    word [1] = word [ 1 ].replace(".", ".");
+
+                    try { double d = Double.parseDouble(word [1]); }
+                    catch (NumberFormatException nfe) {
                         System.out.println(ErSum + "\n" + ErV);
                         continue;
                     }
 
-                    word [1] = word [ 1 ].replace(",", ".");
-                    word [1] = word [ 1 ].replace(".", ".");
                     double num = Double.parseDouble(word[1]);
                     if (num==0) {System.out.println(Er0);}
 
@@ -111,6 +107,13 @@ public class Main {
                 if (word.length <= 3) {
                     word [1] = word [ 1 ].replace(",", ".");
                     word [1] = word [ 1 ].replace(".", ".");
+
+                    try { double d = Double.parseDouble(word [1]); }
+                    catch (NumberFormatException nfe) {
+                        System.out.println(ErSum + "\n" + ErV);
+                        continue;
+                    }
+
                     double num = Double.parseDouble(word[1]);                         // перевод - / суммы в 00,0 / валюта 1 / валюта 2
                     if (num==0) {System.out.println(Er0);}
                     int a = 0;                                                            // ошибка валюты
@@ -138,15 +141,15 @@ public class Main {
                 }
 
                 if (word.length <= 2) {
-                    int f = 0;
-                    for (int i = 0; i < word[1].length(); i++) {
-                        if (Character.isLetter(word[1].charAt(i))) { f++; }
-                    }
-                    if (f > 0) { System.out.println(ErSum + "\n" + ErS);
-                        continue; }
 
                     word [1] = word [ 1 ].replace(",", ".");
                     word [1] = word [ 1 ].replace(".", ".");
+
+                    try { double d = Double.parseDouble(word [1]); }
+                    catch (NumberFormatException nfe) {
+                        System.out.println(ErSum + "\n" + ErV);
+                        continue; }
+
                     double num = Double.parseDouble(word[1]);                      // перевод - / суммы в 00,0 / валюта 1 / валюта 2
                     if (num==0) {System.out.println(Er0);}
 
@@ -156,6 +159,13 @@ public class Main {
                 if (word.length <= 3) {
                     word [1] = word [ 1 ].replace(",", ".");
                     word [1] = word [ 1 ].replace(".", ".");
+
+                    try { double d = Double.parseDouble(word [1]); }
+                    catch (NumberFormatException nfe) {
+                        System.out.println(ErSum + "\n" + ErV);
+                        continue;
+                    }
+
                     double num = Double.parseDouble(word[1]);                      // перевод - / суммы в 00,0 / валюта 1 / валюта 2
                     if (num==0) {System.out.println(Er0);}
                     int a = 0;                                                                      // ошибка валюты
@@ -183,19 +193,15 @@ public class Main {
                 }
 
                 if (word.length <= 2) {
-                    int f = 0;
-                    for (int i = 0; i < word[1].length(); i++) {
-                        if (Character.isLetter(word[1].charAt(i))) {
-                            f++;
-                        }
-                    }
-                    if (f > 0) {
-                        System.out.println(ErSum + "\n" + ErC);
+                    word [1] = word [ 1 ].replace(",", ".");
+                    word [1] = word [ 1 ].replace(".", ".");
+
+                    try { double d = Double.parseDouble(word [1]); }
+                    catch (NumberFormatException nfe) {
+                        System.out.println(ErSum + "\n" + ErV);
                         continue;
                     }
 
-                    word [1] = word [ 1 ].replace(",", ".");
-                    word [1] = word [ 1 ].replace(".", ".");
                     double num = Double.parseDouble(word[1]);                      // перевод - / суммы в 00,0 / валюта 1 / валюта 2
                     if (num==0) {System.out.println(Er0);}
 
@@ -206,6 +212,13 @@ public class Main {
                 if (word.length <= 3) {
                     word [1] = word [ 1 ].replace(",", ".");
                     word [1] = word [ 1 ].replace(".", ".");
+
+                    try { double d = Double.parseDouble(word [1]); }
+                    catch (NumberFormatException nfe) {
+                        System.out.println(ErSum + "\n" + ErV);
+                        continue;
+                    }
+
                     double num = Double.parseDouble(word[1]);
                     if (num==0) {System.out.println(Er0);}
                     int a = 0;                                                      // ошибка валюты
@@ -230,6 +243,12 @@ public class Main {
                 if (word.length <= 4) {
                     word [1] = word [ 1 ].replace(",", ".");
                     word [1] = word [ 1 ].replace(".", ".");
+
+                    try { double d = Double.parseDouble(word [1]); }
+                    catch (NumberFormatException nfe) {
+                        System.out.println(ErSum + "\n" + ErV);
+                        continue; }
+
                     double num = Double.parseDouble(word[1]);
                     if (num==0) {System.out.println(Er0);}
 
